@@ -35,22 +35,12 @@ sanity_check -verbose -analyze all
 
 # get designs statistics
 get_design_info
-#Statistics [for instance "sanduiche"]
-#---------------------------
-# Flops:         2 (10) (0 property flop bits)
-# Latches:       0 (0)
-# Gates:         80 (501)
-# Nets:          95
-# Ports:         12
-# RTL Lines:     113
-# RTL Instances: 1
-# Embedded Assumptions: 0
-# Embedded Assertions:  0
-# Embedded Covers:      0
+
 
 # Prove properties
 # 1st pass: Quick validation of properties with default engines
 #set_max_trace_length 150
+#set_engine_mode {Hp Ht Bm J Q3 U L R B N}
 prove -all
 
 #check_assumptions -minimize -conflict -task <embedded>

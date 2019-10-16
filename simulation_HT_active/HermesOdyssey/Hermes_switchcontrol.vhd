@@ -195,7 +195,7 @@ begin
 					mux_dup <= (others=>'0');
 					source <= (others=>(others=>'1'));
 					-- amory, including these 2 signals
-					duplicating <='1';
+					duplicating <='0';
 					dup_port <= 0;
 				-- Chegou um header
 				when S1=>
