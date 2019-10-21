@@ -6,9 +6,9 @@ module hermes_prop (clock, reset,
 
 input logic clock, reset; 
 input logic [4:0] clock_rx, rx, credit_o;
-input  [15:0] data_in[4:0];
+input  [31:0] data_in[4:0];
 input logic [4:0] clock_tx, tx, credit_i;
-input logic [15:0] data_out[4:0];
+input logic [31:0] data_out[4:0];
 // internal signal - state in int
 input [2:0] S_EA,N_EA, E_EA, W_EA, L_EA; 
 
@@ -66,12 +66,13 @@ assume_Nrx_: assume property (rx[NORTH] == 0 );
 //********************
 
 // a cover to check whether the router can send a simple packet.
-// in this example the packet has only 3 flits [0x0012, 0x0001, 0x0002] and is sent from local port
+// in this example the packet has only 3 flits [0x00000102, 0x00000001, 0x00000002] and is sent from local port
+// header format 32'h----YYXX
 cover_prot: cover property (
 	##0 credit_o[LOCAL] [->1]
-	##1 rx[LOCAL] && data_in[LOCAL] == 16'h0012 ##0 credit_o[LOCAL] [->1] // header
-	##1 rx[LOCAL] && data_in[LOCAL] == 16'h0001 ##0 credit_o[LOCAL] [->1] // size
-	##1 rx[LOCAL] && data_in[LOCAL] == 16'h0002  // data
+	##1 rx[LOCAL] && data_in[LOCAL] == 32'h00000102 ##0 credit_o[LOCAL] [->1] // header
+	##1 rx[LOCAL] && data_in[LOCAL] == 32'h00000001 ##0 credit_o[LOCAL] [->1] // size
+	##1 rx[LOCAL] && data_in[LOCAL] == 32'h00000002  // data
 
 );
 

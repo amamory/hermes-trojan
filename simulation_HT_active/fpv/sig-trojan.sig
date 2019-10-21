@@ -7,7 +7,7 @@
     <radix/>
   </wave>
   <wave>
-    <expr>&lt;embedded&gt;::RouterInfected_wrapper.\Uprop\.assert_single_output_port2</expr>
+    <expr>&lt;embedded&gt;::RouterInfected_wrapper.\Uprop\.assert_show_trojan</expr>
     <label/>
     <radix/>
   </wave>
@@ -22,42 +22,12 @@
     <radix/>
   </wave>
   <wave>
+    <expr>\Uprop\.tx(3 downto 0)</expr>
+    <label/>
+    <radix/>
+  </wave>
+  <wave>
     <expr>\Uprop\.tx</expr>
-    <label/>
-    <radix/>
-  </wave>
-  <wave>
-    <expr>rx</expr>
-    <label/>
-    <radix/>
-  </wave>
-  <wave>
-    <expr>rx(3)</expr>
-    <label/>
-    <radix/>
-  </wave>
-  <wave>
-    <expr>credit_o(3)</expr>
-    <label/>
-    <radix/>
-  </wave>
-  <wave>
-    <expr>data_in(3)</expr>
-    <label/>
-    <radix/>
-  </wave>
-  <wave>
-    <expr>hermes.FSouth.EA</expr>
-    <label/>
-    <radix>hermes.FSouth.EA</radix>
-  </wave>
-  <wave>
-    <expr>hermes.FSouth.buf(0)</expr>
-    <label/>
-    <radix/>
-  </wave>
-  <wave>
-    <expr>hermes.FSouth.buf(1)</expr>
     <label/>
     <radix/>
   </wave>
@@ -77,57 +47,22 @@
     <radix/>
   </wave>
   <wave>
-    <expr>hermes.FLocal.EA</expr>
-    <label/>
-    <radix>hermes.FLocal.EA</radix>
-  </wave>
-  <wave>
-    <expr>hermes.FLocal.buf(0)</expr>
+    <expr>rx(3)</expr>
     <label/>
     <radix/>
   </wave>
   <wave>
-    <expr>hermes.FLocal.buf(1)</expr>
+    <expr>credit_o(3)</expr>
     <label/>
     <radix/>
   </wave>
   <wave>
-    <expr>tx</expr>
-    <label/>
-    <radix/>
-    <wave>
-      <expr>tx(4)</expr>
-      <label/>
-      <radix/>
-    </wave>
-    <wave>
-      <expr>tx(3)</expr>
-      <label/>
-      <radix/>
-    </wave>
-    <wave>
-      <expr>tx(2)</expr>
-      <label/>
-      <radix/>
-    </wave>
-    <wave>
-      <expr>tx(1)</expr>
-      <label/>
-      <radix/>
-    </wave>
-    <wave>
-      <expr>tx(0)</expr>
-      <label/>
-      <radix/>
-    </wave>
-  </wave>
-  <wave>
-    <expr>data_out(0)</expr>
+    <expr>data_in(3)</expr>
     <label/>
     <radix/>
   </wave>
   <wave>
-    <expr>data_out(1)</expr>
+    <expr>tx(2)</expr>
     <label/>
     <radix/>
   </wave>
@@ -137,13 +72,74 @@
     <radix/>
   </wave>
   <wave>
-    <expr>data_out(3)</expr>
+    <expr>tx(1)</expr>
     <label/>
     <radix/>
   </wave>
   <wave>
-    <expr>data_out(4)</expr>
+    <expr>data_out(1)</expr>
     <label/>
     <radix/>
   </wave>
+  <wave>
+    <expr>tx(0)</expr>
+    <label/>
+    <radix/>
+  </wave>
+  <wave>
+    <expr>data_out(0)</expr>
+    <label/>
+    <radix/>
+  </wave>
+  <highlightlist>
+    <!--Users can remove the highlightlist block if they want to load the signal save file into older version of JasperGold-->
+    <highlight>
+      <expr>credit_o(3)</expr>
+      <color>builtin_blue</color>
+    </highlight>
+    <highlight>
+      <expr>credit_o(4)</expr>
+      <color>builtin_red</color>
+    </highlight>
+    <highlight>
+      <expr>data_in(3)</expr>
+      <color>builtin_blue</color>
+    </highlight>
+    <highlight>
+      <expr>data_in(4)</expr>
+      <color>builtin_red</color>
+    </highlight>
+    <highlight>
+      <expr>data_out(0)</expr>
+      <color>builtin_orange</color>
+    </highlight>
+    <highlight>
+      <expr>data_out(1)</expr>
+      <color>builtin_yellow</color>
+    </highlight>
+    <highlight>
+      <expr>data_out(2)</expr>
+      <color>builtin_green</color>
+    </highlight>
+    <highlight>
+      <expr>rx(3)</expr>
+      <color>builtin_blue</color>
+    </highlight>
+    <highlight>
+      <expr>rx(4)</expr>
+      <color>builtin_red</color>
+    </highlight>
+    <highlight>
+      <expr>tx(0)</expr>
+      <color>builtin_orange</color>
+    </highlight>
+    <highlight>
+      <expr>tx(1)</expr>
+      <color>builtin_yellow</color>
+    </highlight>
+    <highlight>
+      <expr>tx(2)</expr>
+      <color>builtin_green</color>
+    </highlight>
+  </highlightlist>
 </wavelist>
